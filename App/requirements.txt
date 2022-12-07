@@ -1,4 +1,2 @@
-nltk==3.5
-numpy @ file:///opt/conda/conda-bld/numpy_and_numpy_base_1653915516269/work
-pandas==1.4.4
+nltk==3.7
 streamlit==1.15.2
