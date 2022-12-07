@@ -1,9 +1,9 @@
 import streamlit as st
 import pickle as pk
 import string
-import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
+from nltk.tokenize import word_tokenize
 
 tfidf = pk.load(open('vectorizer.pkl', 'rb'))
 model = pk.load(open('model.pkl', 'rb'))
@@ -13,7 +13,7 @@ ps = PorterStemmer()
 
 def perform_data_pre_processing(text) : 
     text = text.lower() # converto lower case
-    text = nltk.word_tokenize(text) # tokenization
+    text = word_tokenize(text) # tokenization
     
     # retaining alpha numeric words
     y = []
