@@ -5,7 +5,9 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
+
 nltk.download('punkt')
+nltk.download('stopwords')
 
 tfidf = pk.load(open('vectorizer.pkl', 'rb'))
 model = pk.load(open('model.pkl', 'rb'))
